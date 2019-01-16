@@ -41,8 +41,6 @@ function isPangram(str) {
               }), alphabet);
 }
 
-console.log(isPangram("Pack my box with five dozen liquor jugs."));
-
 exports.array = array;
 exports.otherArray = otherArray;
 exports.logicArray = logicArray;

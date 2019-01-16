@@ -18,5 +18,3 @@ let alphabet =
 
 let isPangram = str =>
   alphabet |> List.for_all(String.uppercase(str) |> String.contains);
-
-Js.log(isPangram("Pack my box with five dozen liquor jugs."));
