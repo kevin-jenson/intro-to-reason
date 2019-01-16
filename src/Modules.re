@@ -2,11 +2,15 @@ module ArraysToolbox = {
   let checkPangram = Arrays.isPangram;
 };
 
-module Math = {
-  module Tools = {
-    let times = (x, y) => x * y;
-    let square = x => times(x, x);
-  };
+module type MathToolsInterface = {
+  let times: (int, int) => int;
+  let square: int => int;
 };
 
-Js.log(Math.Tools.square(3));
+module Math: MathToolsInterface = {
+  include Belt;
+  let times = (x, y) => x * y;
+  let square = x => times(x, x);
+};
+
+Js.log();

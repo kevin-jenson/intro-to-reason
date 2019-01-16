@@ -12,14 +12,12 @@ function square(x) {
   return Caml_int32.imul(x, x);
 }
 
-var Tools = /* module */[
+var $$Math = /* module */[
   /* times */times,
   /* square */square
 ];
 
-var $$Math = /* module */[/* Tools */Tools];
-
-console.log(9);
+console.log(/* () */0);
 
 exports.ArraysToolbox = ArraysToolbox;
 exports.$$Math = $$Math;
