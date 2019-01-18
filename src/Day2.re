@@ -116,18 +116,18 @@ let rec insert = (tree, compare, v) => {
   };
 };
 
-let rec remove = (tree, compare, v) => {
-  switch (tree) {
-  | Empty => Empty
-  | Node({value, left: Empty, right: Empty}) =>
-    compare(v, value) == 0 ? Empty : tree
-  | Node({value, left: Node(_) as left, right: Empty as right}) =>
-    compare(v, value) == 0 ?
-      left : Node({value, left: remove(left, compare, v), right})
-  | Node({value, left: Empty as left, right: Node(_) as right}) =>
-    compare(v, value) == 0 ?
-      right : Node({value, left, right: remove(right, compare, v)})
-  };
-};
+/* let rec remove = (tree, compare, v) => {
+     switch (tree) {
+     | Empty => Empty
+     | Node({value, left: Empty, right: Empty}) =>
+       compare(v, value) == 0 ? Empty : tree
+     | Node({value, left: Node(_) as left, right: Empty as right}) =>
+       compare(v, value) == 0 ?
+         left : Node({value, left: remove(left, compare, v), right})
+     | Node({value, left: Empty as left, right: Node(_) as right}) =>
+       compare(v, value) == 0 ?
+         right : Node({value, left, right: remove(right, compare, v)})
+     };
+   }; */
 
 Js.log(numberToRomanNumeral(10));
