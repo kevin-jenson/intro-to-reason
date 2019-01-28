@@ -1,0 +1,5 @@
+- Wrap every excercise you did in Day 2 into a Module
+- Write an interface file for every dule exporting only necesssary types
+- write tests fro "api Respsonse excercise" from day1 with https://github.com/glennsl/bs-jest
+- configure your project to run with webpack
+- use bs-fetch and bs-json to get data froM swapi and paste it to the console (for promises use Js.Promise)
